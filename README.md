@@ -5,7 +5,7 @@
 =====================
 
 >This is a tool that builds on the psa crypto library that is a part of the Arduino for ESP32. 
-> The Idea is to make it easy to implement encrypted data. This library does work for wire transfer.
+> The Idea is to make it easy to implement encrypted data. This library does not work for wire transfer.
 > This tool will encrypt/decrypted text with the purpose of saving/reading it to the ESP32.
 
 >_Examples for usage might be:_
