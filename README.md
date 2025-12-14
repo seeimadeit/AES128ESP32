@@ -1,6 +1,11 @@
 # ReadME.txt
 
 
+Download the library as a .ZIP file (click on \<\>Code , Download ZIP), 
+then from the Arduino IDE click on Sketch -> Include Library -> Add .ZIP Library.
+Some examples are available from File -> Examples -> ASP128ESP32 Library.
+
+
 # AES128ESP32 Library
 =====================
 
