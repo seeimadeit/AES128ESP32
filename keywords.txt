@@ -1,0 +1,26 @@
+#######################################
+# Syntax Coloring Map
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+pass2Key	      KEYWORD1
+cryptoAES128		KEYWORD1
+encryptedData   KEYWORD1
+ivData          KEYWORD1
+MasterKeyData   KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+makeMasterKey   KEYWORD2
+getMasterKey	  KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+MSTRKEYSALT   KEYWORD2
