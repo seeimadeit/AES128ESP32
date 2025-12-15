@@ -94,7 +94,7 @@ $(function(){initNavTree('psaerr2str_8h.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a162361d72405c0e8c030f1f492a9ca5b" id="r_a162361d72405c0e8c030f1f492a9ca5b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a162361d72405c0e8c030f1f492a9ca5b">FALSEORSTOP</a>(status,  function)</td></tr>
+<tr class="memitem:ad46c1d93577d4a6235576454e3265d4a" id="r_ad46c1d93577d4a6235576454e3265d4a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad46c1d93577d4a6235576454e3265d4a">FALSEORSTOP</a>(s,  f)</td></tr>
 <tr class="memitem:aa500b77162bc80d51bce79e117b74416" id="r_aa500b77162bc80d51bce79e117b74416"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa500b77162bc80d51bce79e117b74416">DUMP</a>(t,  b,  l)</td></tr>
 <tr class="memitem:ad41bc938cdfa06f0fee1bd4b3d23d309" id="r_ad41bc938cdfa06f0fee1bd4b3d23d309"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad41bc938cdfa06f0fee1bd4b3d23d309">AES128_ERROR1</a>&#160;&#160;&#160;1000</td></tr>
 <tr class="memitem:ab4dedac29e8f9b84d83a4cd0e44c2cd0" id="r_ab4dedac29e8f9b84d83a4cd0e44c2cd0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4dedac29e8f9b84d83a4cd0e44c2cd0">AES128_ERROR2</a>&#160;&#160;&#160;1001</td></tr>
@@ -229,15 +229,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_function" href="psaerr2str_8cpp.html#a969c1ba873ca88056b9e8095e9fa0e83">cryptodump</a>(t, b, l)</div>
-<div class="ttc" id="apsaerr2str_8cpp_html_a969c1ba873ca88056b9e8095e9fa0e83"><div class="ttname"><a href="psaerr2str_8cpp.html#a969c1ba873ca88056b9e8095e9fa0e83">cryptodump</a></div><div class="ttdeci">void cryptodump(String title, unsigned char *buf, int lenbuff)</div><div class="ttdef"><b>Definition</b> <a href="psaerr2str_8cpp_source.html#l00015">psaerr2str.cpp:15</a></div></div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="psaerr2str_8h_source.html#l00020">20</a> of file <a class="el" href="psaerr2str_8h_source.html">psaerr2str.h</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="psaerr2str_8h_source.html#l00022">22</a> of file <a class="el" href="psaerr2str_8h_source.html">psaerr2str.h</a>.</p>
 
 </div>
 </div>
-<a id="a162361d72405c0e8c030f1f492a9ca5b" name="a162361d72405c0e8c030f1f492a9ca5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a162361d72405c0e8c030f1f492a9ca5b">&#9670;&#160;</a></span>FALSEORSTOP</h2>
+<a id="ad46c1d93577d4a6235576454e3265d4a" name="ad46c1d93577d4a6235576454e3265d4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad46c1d93577d4a6235576454e3265d4a">&#9670;&#160;</a></span>FALSEORSTOP</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,22 +243,18 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">#define FALSEORSTOP</td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>status</em></span>, </td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>s</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>function</em></span>&#160;)</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>f</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">      <a class="code hl_define" href="delays_8h.html#a76f3f41704b017cd5003628dd0bc366b">DEBUG2</a>(String(function) + <span class="stringliteral">&quot; failed &quot;</span> + <a class="code hl_function" href="psaerr2str_8cpp.html#ad2e0e946d2c82da16e85def32cc3ab32">cryptoerrortoString</a>(status)); \</div>
-<div class="line">      <a class="code hl_define" href="delays_8h.html#ae19b6bb2940d2fbe0a79852b070eeafd">STOP</a>;</div>
-<div class="ttc" id="adelays_8h_html_a76f3f41704b017cd5003628dd0bc366b"><div class="ttname"><a href="delays_8h.html#a76f3f41704b017cd5003628dd0bc366b">DEBUG2</a></div><div class="ttdeci">#define DEBUG2</div><div class="ttdef"><b>Definition</b> <a href="delays_8h_source.html#l00035">delays.h:35</a></div></div>
-<div class="ttc" id="adelays_8h_html_ae19b6bb2940d2fbe0a79852b070eeafd"><div class="ttname"><a href="delays_8h.html#ae19b6bb2940d2fbe0a79852b070eeafd">STOP</a></div><div class="ttdeci">#define STOP</div><div class="ttdef"><b>Definition</b> <a href="delays_8h_source.html#l00005">delays.h:5</a></div></div>
-<div class="ttc" id="apsaerr2str_8cpp_html_ad2e0e946d2c82da16e85def32cc3ab32"><div class="ttname"><a href="psaerr2str_8cpp.html#ad2e0e946d2c82da16e85def32cc3ab32">cryptoerrortoString</a></div><div class="ttdeci">String cryptoerrortoString(psa_status_t err)</div><div class="ttdef"><b>Definition</b> <a href="psaerr2str_8cpp_source.html#l00071">psaerr2str.cpp:71</a></div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="psaerr2str_8h_source.html#l00008">8</a> of file <a class="el" href="psaerr2str_8h_source.html">psaerr2str.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psaerr2str_8h_source.html#l00015">15</a> of file <a class="el" href="psaerr2str_8h_source.html">psaerr2str.h</a>.</p>
 
 </div>
 </div>

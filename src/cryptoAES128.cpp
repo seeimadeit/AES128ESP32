@@ -251,7 +251,6 @@ bool cryptoAES128::Encrypt(String datatoEncrypt, encryptedData **returndata) {
       FALSEORSTOP(status, "psa_aead_update");
     }
     // move encrytped data to output buffer
-     Serial.println(heap_caps_check_integrity_all(true));
     for (int i = 0; i < olen; i++)
       outputbytes.push_back(outbuf[i]);
     DUMP("outbuf", outbuf, olen);

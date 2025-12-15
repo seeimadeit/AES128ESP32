@@ -1,0 +1,20 @@
+Look at the example in the follow order to learn how to use it.
+Example1_CreateAndSave_a_MasterKey
+Example2_Handle_an_Error
+Example3_Load_a_Masterkey
+Example4_Encrypt_some_text
+Example5_Decrypt_some_text
+
+When you encrypt data and then decrypt the data with an incorrect password there is no error, it just decrypts into junk.
+So what I do is put some known text in front of the data to be encrypted. It can be anything you like it's not important.
+Then when you decrypt the data you know that if the user entered the correct password the known text you prefixed the data to be encrypted
+Will be readable and you can for test it. If you cannot read the prefix data (it's not what you used for the prefix) then you know the
+user didn't supply the correct password.
+
+For example the data that needs to be encrypted is "My private information".
+Before you encrypt the data prefix it with something like "X_X". So now it reads "X_XMy private information"
+
+Now when you decrypt the data you can read the first 3 bytes and can tell if the decryption was successful by comparing
+the bytes with "X_X". If they are not the same then the actual data will not be decrypted correctly either.
+
+Don't forget to remove the prefix from the data before you use it.
