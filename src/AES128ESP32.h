@@ -1,7 +1,7 @@
 #pragma once
 
 /** change the DEBUGLEVEL from 0, 1 ,2 or 3 or just leave it commented out*/
-// #define DEBUGLEVEL 3
+#define DEBUGLEVEL 3
 /** if your application just stops and freezes, set DEBUGLEVEL to 2. This will allow you to see
 where it stopped.
 if you just want to have a look around then DEBUGLEVEL 3 will give you more information.

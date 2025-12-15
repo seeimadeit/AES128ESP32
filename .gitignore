@@ -43,3 +43,8 @@
 aesencrypt.ino
 gendoc
 builddoc.sh
+MakeZip
+.DS_Store
+AES128ESP32.ino
+exclude.lst
+extra/*

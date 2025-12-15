@@ -1,3 +1,4 @@
+#include <cstring>
 #include "psaerr2str.h"
 #include "AES128ESP32.h"
 // #include "psaerr2str.h"
@@ -184,7 +185,7 @@ bool cryptoAES128::Decrypt(encryptedData &encdata, String &rtn) {
     for (int i = 0; i < sizeof(inpbuf); i++)
       inpbuf[i] = *bytes++;
 
-    DUMP("inpbuf decrypt", inpbuf, sizeof(inpbuf));
+    // DUMP("inpbuf decrypt", inpbuf, sizeof(inpbuf));
     lastcharactercount = lastcharactercount + sizeof(inpbuf);
     status = psa_aead_update(&op, inpbuf, sizeof(inpbuf), outbuf, sizeof(outbuf), &olen);
     if (status != PSA_SUCCESS) {
@@ -224,28 +225,25 @@ bool cryptoAES128::Encrypt(String datatoEncrypt, encryptedData **returndata) {
   psa_status_t status;
   unsigned char outbuf[key_bits / 8];
   assert(sizeof(outbuf) == 16);
-  unsigned char inpbuf[key_bits / 8];
+  unsigned char inpbuf[(key_bits / 8)]; 
 
   buildKeyForAESEncryptOrDecrypt();
 
   size_t olen;
-  std::list<unsigned char> outputbytes;
+  std::list<unsigned char>  outputbytes;
   int lastcharactercount = 0;
-  int maxlength = datatoEncrypt.length();
+  int maxlength = datatoEncrypt.length();  
+  const char* thetext = datatoEncrypt.c_str();
 
   // copy at most key_bits /8
   while (lastcharactercount < maxlength) {
-    String dataforthisround = datatoEncrypt.substring(lastcharactercount, lastcharactercount + 16);
-    dataforthisround.getBytes(inpbuf, dataforthisround.length() + 1);
-    lastcharactercount += dataforthisround.length();
+    DEBUG3("start of loop");
+    memset(inpbuf,0,sizeof(inpbuf));
+    size_t copymax = (lastcharactercount + 16 < maxlength-lastcharactercount) ? lastcharactercount + 16 : maxlength-lastcharactercount;
+    DEBUG3("copy max = " + String(copymax));
+    memcpy(inpbuf, thetext+lastcharactercount, copymax);
+    lastcharactercount += 16;
 
-    // i need to erase the end-- note i'm using zero bytes because its a string
-    // if this was binary data i would need to know the expected length to trim from
-    int stilltodo = sizeof(inpbuf) - dataforthisround.length();
-    unsigned char *p = inpbuf + dataforthisround.length();
-    for (int i = 0; i < stilltodo; i++)
-      *p++ = 0;  //'*';
-    // = '*';  // only for validation
     DUMP("inpbuf", inpbuf, sizeof(inpbuf));
 
     status = psa_aead_update(&op, inpbuf, sizeof(inpbuf), outbuf, sizeof(outbuf), &olen);
@@ -253,6 +251,7 @@ bool cryptoAES128::Encrypt(String datatoEncrypt, encryptedData **returndata) {
       FALSEORSTOP(status, "psa_aead_update");
     }
     // move encrytped data to output buffer
+     Serial.println(heap_caps_check_integrity_all(true));
     for (int i = 0; i < olen; i++)
       outputbytes.push_back(outbuf[i]);
     DUMP("outbuf", outbuf, olen);
@@ -262,13 +261,13 @@ bool cryptoAES128::Encrypt(String datatoEncrypt, encryptedData **returndata) {
   if (status != PSA_SUCCESS) {
     FALSEORSTOP(status, "psa_aead_update");
   }
-  int numbytes = outputbytes.size();
+
+  int numbytes = outputbytes.size(); //
   /*encryptedData */ *returndata = new encryptedData(numbytes);
   unsigned char *rtn = (*returndata)->data;
   for (int i = 0; i < numbytes; i++) {
     rtn[i] = outputbytes.front();
     outputbytes.pop_front();
   }
-  // return returndata;
   return true;
 }

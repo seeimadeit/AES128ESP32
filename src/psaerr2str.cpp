@@ -13,6 +13,7 @@ psa_status_t getLastAES128error() {
 for debugging only.
 */
 void cryptodump(String title, unsigned char *buf, int lenbuff) {
+  DEBUG2("lenbuff="+String(lenbuff));
   char hexbuffer[3];
   Serial.print(title);
   Serial.print(" ");

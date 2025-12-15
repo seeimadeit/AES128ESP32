@@ -95,21 +95,21 @@ $(function(){initNavTree('psaerr2str_8h_source.html','',''); });
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifdef DEBUGLEVEL</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">  #if DEBUGLEVEL &gt; 1</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">    #define FALSEORSTOP(status, function) \</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="psaerr2str_8h.html#a162361d72405c0e8c030f1f492a9ca5b">    8</a></span><span class="preprocessor">    #define FALSEORSTOP(status, function) \</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">      DEBUG2(String(function) + &quot; failed &quot; + cryptoerrortoString(status)); \</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">      STOP;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">  #else</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">    #define FALSEORSTOP(s,f) return false;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">  #endif</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="psaerr2str_8h.html#ad46c1d93577d4a6235576454e3265d4a">   15</a></span><span class="preprocessor">  #define FALSEORSTOP(s, f) return false;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">  #define FALSEORSTOP(s, f) return false;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#if DEBUGLEVEL &gt; 2</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="comment">// #warning debug level set</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">  #define DUMP(t, b, l) cryptodump(t, b, l)</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="psaerr2str_8h.html#aa500b77162bc80d51bce79e117b74416">   20</a></span><span class="preprocessor">  #define DUMP(t, b, l) cryptodump(t, b, l)</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="psaerr2str_8h.html#aa500b77162bc80d51bce79e117b74416">   22</a></span><span class="preprocessor">  #define DUMP(t, b, l)</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">  #define DUMP(t, b, l)</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="psaerr2str_8h.html#ad41bc938cdfa06f0fee1bd4b3d23d309">   25</a></span><span class="preprocessor">#define AES128_ERROR1 1000</span></div>
@@ -126,7 +126,7 @@ $(function(){initNavTree('psaerr2str_8h_source.html','',''); });
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>String <a class="code hl_function" href="psaerr2str_8h.html#ad2e0e946d2c82da16e85def32cc3ab32">cryptoerrortoString</a>(psa_status_t err);</div>
 <div class="ttc" id="a_a_e_s128_e_s_p32_8h_html"><div class="ttname"><a href="_a_e_s128_e_s_p32_8h.html">AES128ESP32.h</a></div></div>
 <div class="ttc" id="apsaerr2str_8h_html_a969c1ba873ca88056b9e8095e9fa0e83"><div class="ttname"><a href="psaerr2str_8h.html#a969c1ba873ca88056b9e8095e9fa0e83">cryptodump</a></div><div class="ttdeci">void cryptodump(String title, unsigned char *buf, int lenbuff)</div><div class="ttdef"><b>Definition</b> <a href="psaerr2str_8cpp_source.html#l00015">psaerr2str.cpp:15</a></div></div>
-<div class="ttc" id="apsaerr2str_8h_html_ad2e0e946d2c82da16e85def32cc3ab32"><div class="ttname"><a href="psaerr2str_8h.html#ad2e0e946d2c82da16e85def32cc3ab32">cryptoerrortoString</a></div><div class="ttdeci">String cryptoerrortoString(psa_status_t err)</div><div class="ttdef"><b>Definition</b> <a href="psaerr2str_8cpp_source.html#l00070">psaerr2str.cpp:70</a></div></div>
+<div class="ttc" id="apsaerr2str_8h_html_ad2e0e946d2c82da16e85def32cc3ab32"><div class="ttname"><a href="psaerr2str_8h.html#ad2e0e946d2c82da16e85def32cc3ab32">cryptoerrortoString</a></div><div class="ttdeci">String cryptoerrortoString(psa_status_t err)</div><div class="ttdef"><b>Definition</b> <a href="psaerr2str_8cpp_source.html#l00071">psaerr2str.cpp:71</a></div></div>
 <div class="ttc" id="apsaerr2str_8h_html_af10589e8b8a6726fced71604bf015e0a"><div class="ttname"><a href="psaerr2str_8h.html#af10589e8b8a6726fced71604bf015e0a">getLastAES128error</a></div><div class="ttdeci">psa_status_t getLastAES128error()</div><div class="ttdef"><b>Definition</b> <a href="psaerr2str_8cpp_source.html#l00008">psaerr2str.cpp:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
