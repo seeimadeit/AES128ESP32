@@ -42,7 +42,7 @@
 
 aesencrypt.ino
 gendoc
-builddoc.sh
+builddoc
 MakeZip
 .DS_Store
 AES128ESP32.ino
